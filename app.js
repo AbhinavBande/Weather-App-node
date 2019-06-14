@@ -2,7 +2,7 @@ const geocode=require('./utils/geocode.js')
 const forecast=require('./utils/forecast.js')
 
 if(process.argv[2]){
-    geocode(process.argv[2], (error,{location, latitude, longitude})=>{
+    geocode(process.argv[2], (error,{location, latitude, longitude}={})=>{
         if(error){
             return console.log(error)
         }
